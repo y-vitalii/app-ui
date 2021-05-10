@@ -1,0 +1,60 @@
+.header {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+}
+
+.header_left-side {
+    display: inline-block;
+    width: 50%;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.header_right-side {
+    display: inline-block;
+    width: 50%;
+}
+
+.header_left-side__logo {
+    text-align: left;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+.header_right-side_buttons {
+    text-align: right;
+}
+
+.header_right-side_buttons__btn_white {
+    height: 35px;
+    background-color: white;
+    border: 1px solid dodgerblue;
+    border-radius: 99999px;
+    font-weight: bold;
+    color: dodgerblue;
+    margin-right: 10px;
+    padding: 0 15px 0 15px;
+}
+
+.header_right-side_buttons__btn_blue {
+    border: 1px solid dodgerblue;
+    background-color: dodgerblue;
+    border-radius: 99999px;
+    color: white;
+    height: 35px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 0 15px 0 15px;
+}
+
+.header_right-side_user__text{
+    font-weight: bold;
+    margin-right: 10px;
+    color: dodgerblue;
+}
+
+.header_right-side_user {
+    text-align: right;
+}

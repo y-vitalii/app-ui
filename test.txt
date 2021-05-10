@@ -1,0 +1,72 @@
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const getStyleLoader = require('style-loader');
+const webpack = require('webpack');
+
+module.exports = {
+    context: __dirname,
+    entry: './src/index.tsx',
+    output: {
+        path: path.resolve(__dirname, './ui/dist'),
+        filename: 'bundle.js',
+        publicPath: '/',
+        clean: true,
+    },
+    devServer: {
+        historyApiFallback: true,
+        port: 3000,
+        proxy: {
+            '/': {
+                target: 'http://localhost:8000'
+            },
+        },
+        watchContentBase: true,
+        hot: true,
+        hotOnly: true,
+        inline: false,
+    },
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.css$/,
+                use: [{
+                    loader: "style-loader"
+                },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                            modules: {
+                                localIdentName: "[name]__[local]___[hash:base64:5]",
+                            },
+                        }
+                    }],
+            },
+            {
+                test: /\.(png|j?g|svg|gif)?$/,
+                use: 'file-loader'
+            },
+            {
+                use: getStyleLoader({
+                    modules: true,
+                    localIdentName: '[name]__[local]__[hash:base64:5]'
+                })
+            }
+        ]
+    },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".jsx"]
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: path.resolve(__dirname, 'public/index.html'),
+            filename: 'index.html'
+        }),
+        new webpack.HotModuleReplacementPlugin()
+    ]
+};

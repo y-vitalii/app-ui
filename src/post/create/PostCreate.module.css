@@ -1,0 +1,109 @@
+.post {
+
+}
+
+.post_create {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.post_create__label {
+    text-align: left;
+    font-weight: 400;
+    font-size: large;
+}
+
+.post_create_container {
+    background-color: white;
+    border-radius: 4px;
+}
+
+.post_create_menu-btn {
+    display: flex;
+}
+
+.post_create_menu-btn button {
+    width: 33.333333%;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #d2d0d0;
+    border-width: 0px 1px 1px 0px;
+    border-radius: 0px;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+.post_create_menu-btn button:last-child {
+    border-right: none;
+}
+
+.post_create_menu-btn button:hover {
+    background-color: #f5faff;
+}
+
+.post_create__form-input {
+    width: 95%;
+    box-sizing: border-box;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    font-size: small;
+    background-color: transparent;
+    padding: 10px 5px;
+    margin-top: 10px;
+}
+
+.post_create__form-textarea {
+    resize: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+    width: 95%;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 1px solid gainsboro;
+    margin-top: 10px;
+}
+
+.post_buttons {
+    text-align: right;
+    padding: 10px 0;
+}
+
+.post_buttons__btn_white {
+    height: 35px;
+    background-color: white;
+    border: 1px solid dodgerblue;
+    border-radius: 99999px;
+    font-weight: bold;
+    color: dodgerblue;
+    margin-right: 10px;
+    padding: 0 15px 0 15px;
+}
+
+.post_create-image {
+    margin-top: 10px;
+}
+
+.post_create-image_review {
+    text-align: left;
+    padding: 10px 10px;
+}
+
+.post_create-image_review__img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(234, 234, 234);
+    overflow: hidden;
+    border-radius: 2px;
+    padding: 4px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.post_create-image_review__img img {
+    width: auto;
+    height: 100%;
+}
